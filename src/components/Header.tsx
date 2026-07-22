@@ -21,7 +21,7 @@ export default function Header() {
             />
           </Link>
 
-          <button 
+          <button
             className="mobile-menu-btn"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
