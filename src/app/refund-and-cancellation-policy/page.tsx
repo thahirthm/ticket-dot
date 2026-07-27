@@ -7,15 +7,15 @@ export default function RefundAndCancellationPolicy() {
     <main className="legal-page-main">
       <Header />
       
-      <div className="legal-content-wrapper">
-        <div className="container">
-          <div className="legal-card">
-            <h1 className="legal-title">Refund & Cancellation Policy</h1>
-            <p className="legal-meta">
-              For: TicketDot Technologies Private Limited<br/>
-              Version: 1.0 (Draft)
-            </p>
+      <div className="legal-header">
+        <h1 className="legal-title">Refund & Cancellation Policy</h1>
+        <p className="legal-subtitle">
+          Welcome to TicketDot Technologies. This policy outlines our guidelines and procedures regarding refunds and cancellations for tickets purchased through our platform.
+        </p>
+      </div>
 
+      <div className="legal-content-wrapper">
+        <div className="container legal-container">
             <div className="legal-sections">
               <section>
                 <h2 className="legal-section-title">1. Eligible Refunds</h2>
@@ -46,7 +46,6 @@ export default function RefundAndCancellationPolicy() {
             <div className="legal-warning">
               IMPORTANT: This document is a professionally structured draft and should be reviewed by legal counsel before publication.
             </div>
-          </div>
         </div>
       </div>
       

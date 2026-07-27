@@ -13,8 +13,27 @@ const banners = [
   "/banner4.png"
 ];
 
+const featuresList = [
+  {
+    number: "01",
+    title: "Quick Booking",
+    desc: "Find routes and reserve seats in just a few taps."
+  },
+  {
+    number: "02",
+    title: "Secure Payments",
+    desc: "Pay confidently through trusted and secure payment options."
+  },
+  {
+    number: "03",
+    title: "Seamless Boarding",
+    desc: "Show your digital ticket to the conductor and board without delays."
+  }
+];
+
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeFeature, setActiveFeature] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -233,40 +252,63 @@ export default function Home() {
         <div className="container">
           <div className="feature-split-grid">
             <div className="feature-split-content">
-              <span className="feature-label">/APP FEATURES</span>
-              <h2 className="feature-title" style={{ marginBottom: '3rem', fontSize: '3.5rem', fontWeight: 500, lineHeight: 1.2 }}>
-                Smarter Features for a<br />
-                <span className="text-primary">Smoother</span> Ride
+              <span className="feature-label desktop-only">/APP FEATURES</span>
+              <h2 className="feature-title feature-title-split">
+                Smarter Features for<br />
+                a <span className="text-primary">Smoother</span> Ride
               </h2>
 
+              {/* Mobile-only featured app mockup image card right below title */}
+              <div className="feature-mobile-image-card mobile-only">
+                <div className="feature-mobile-image-inner">
+                  <Image
+                    src="/feature.png"
+                    alt="App Features"
+                    width={320}
+                    height={340}
+                    style={{ objectFit: 'contain', width: '100%', height: 'auto' }}
+                  />
+                </div>
+              </div>
+
               <div className="features-list-wrapper">
-                <div className="feature-list-item active">
-                  <div className="feature-list-number">01</div>
-                  <div className="feature-list-text">
-                    <h3 className="feature-list-title">Quick Booking</h3>
-                    <p className="feature-list-desc">Find routes and reserve seats in just a few taps.</p>
-                  </div>
-                </div>
-
-                <div className="feature-list-item">
-                  <div className="feature-list-number">02</div>
-                  <div className="feature-list-text">
-                    <h3 className="feature-list-title">Secure Payments</h3>
-                    <p className="feature-list-desc">Pay confidently through trusted and secure payment options.</p>
-                  </div>
-                </div>
-
-                <div className="feature-list-item">
-                  <div className="feature-list-number">03</div>
-                  <div className="feature-list-text">
-                    <h3 className="feature-list-title">Seamless Boarding</h3>
-                    <p className="feature-list-desc">Show your digital ticket to the conductor and board without delays.</p>
-                  </div>
-                </div>
+                {featuresList.map((item, index) => {
+                  const isActive = activeFeature === index;
+                  return (
+                    <div
+                      key={item.number}
+                      className={`feature-list-item ${isActive ? 'active' : ''}`}
+                      onClick={() => setActiveFeature(index)}
+                    >
+                      <div className="feature-list-number">{item.number}</div>
+                      <div className="feature-list-text">
+                        <div className="feature-list-title-row">
+                          <h3 className="feature-list-title">{item.title}</h3>
+                          <div className="feature-list-icon mobile-only">
+                            <svg
+                              className={`chevron-icon ${isActive ? 'chevron-down' : 'chevron-up'}`}
+                              width="20"
+                              height="20"
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              strokeWidth="2.5"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            >
+                              <polyline points={isActive ? "6 9 12 15 18 9" : "18 15 12 9 6 15"}></polyline>
+                            </svg>
+                          </div>
+                        </div>
+                        <p className="feature-list-desc">{item.desc}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
-            <div className="feature-split-image">
+            <div className="feature-split-image desktop-only">
               <Image
                 src="/feature.png"
                 alt="App Features"
@@ -299,20 +341,56 @@ export default function Home() {
           <div className="marquee-container">
             <div className="marquee-trackss">
               <div className="marquee-content">
-                <div className="logo-item"><Image src="/Kerala_StartUp_Mission_Logo.svg" alt="Kerala Startup Mission" width={100} height={40} style={{ objectFit: 'contain' }} /></div>
-                <div className="logo-item"><Image src="/Amazon_Web_Services_Logo (1).svg" alt="Amazon Web Services" width={100} height={40} style={{ objectFit: 'contain' }} /></div>
-                <div className="logo-item"><Image src="/msg91.svg" alt="MSG91" width={100} height={40} style={{ objectFit: 'contain' }} /></div>
-                <div className="logo-item"><Image src="/Kerala_StartUp_Mission_Logo.svg" alt="Kerala Startup Mission" width={100} height={40} style={{ objectFit: 'contain' }} /></div>
-                <div className="logo-item"><Image src="/Amazon_Web_Services_Logo (1).svg" alt="Amazon Web Services" width={100} height={40} style={{ objectFit: 'contain' }} /></div>
-                <div className="logo-item"><Image src="/msg91.svg" alt="MSG91" width={100} height={40} style={{ objectFit: 'contain' }} /></div>
+                <div className="logo-item">
+                  <Image src="/Kerala_StartUp_Mission_Logo.svg" alt="Kerala Startup Mission" width={100} height={40} style={{ objectFit: 'contain' }} />
+                  <span className="logo-partner-label">Ecosystem Partner</span>
+                </div>
+                <div className="logo-item">
+                  <Image src="/Amazon_Web_Services_Logo (1).svg" alt="Amazon Web Services" width={100} height={40} style={{ objectFit: 'contain' }} />
+                  <span className="logo-partner-label">Cloud Partner</span>
+                </div>
+                <div className="logo-item">
+                  <Image src="/msg91.svg" alt="MSG91" width={100} height={40} style={{ objectFit: 'contain' }} />
+                  <span className="logo-partner-label">Communication Partner</span>
+                </div>
+                <div className="logo-item">
+                  <Image src="/Kerala_StartUp_Mission_Logo.svg" alt="Kerala Startup Mission" width={100} height={40} style={{ objectFit: 'contain' }} />
+                  <span className="logo-partner-label">Ecosystem Partner</span>
+                </div>
+                <div className="logo-item">
+                  <Image src="/Amazon_Web_Services_Logo (1).svg" alt="Amazon Web Services" width={100} height={40} style={{ objectFit: 'contain' }} />
+                  <span className="logo-partner-label">Cloud Partner</span>
+                </div>
+                <div className="logo-item">
+                  <Image src="/msg91.svg" alt="MSG91" width={100} height={40} style={{ objectFit: 'contain' }} />
+                  <span className="logo-partner-label">Communication Partner</span>
+                </div>
               </div>
               <div className="marquee-content" aria-hidden="true">
-                <div className="logo-item"><Image src="/Kerala_StartUp_Mission_Logo.svg" alt="Kerala Startup Mission" width={100} height={40} style={{ objectFit: 'contain' }} /></div>
-                <div className="logo-item"><Image src="/Amazon_Web_Services_Logo (1).svg" alt="Amazon Web Services" width={100} height={40} style={{ objectFit: 'contain' }} /></div>
-                <div className="logo-item"><Image src="/msg91.svg" alt="MSG91" width={100} height={40} style={{ objectFit: 'contain' }} /></div>
-                <div className="logo-item"><Image src="/Kerala_StartUp_Mission_Logo.svg" alt="Kerala Startup Mission" width={100} height={40} style={{ objectFit: 'contain' }} /></div>
-                <div className="logo-item"><Image src="/Amazon_Web_Services_Logo (1).svg" alt="Amazon Web Services" width={100} height={40} style={{ objectFit: 'contain' }} /></div>
-                <div className="logo-item"><Image src="/msg91.svg" alt="MSG91" width={100} height={40} style={{ objectFit: 'contain' }} /></div>
+                <div className="logo-item">
+                  <Image src="/Kerala_StartUp_Mission_Logo.svg" alt="Kerala Startup Mission" width={100} height={40} style={{ objectFit: 'contain' }} />
+                  <span className="logo-partner-label">Ecosystem Partner</span>
+                </div>
+                <div className="logo-item">
+                  <Image src="/Amazon_Web_Services_Logo (1).svg" alt="Amazon Web Services" width={100} height={40} style={{ objectFit: 'contain' }} />
+                  <span className="logo-partner-label">Cloud Partner</span>
+                </div>
+                <div className="logo-item">
+                  <Image src="/msg91.svg" alt="MSG91" width={100} height={40} style={{ objectFit: 'contain' }} />
+                  <span className="logo-partner-label">Communication Partner</span>
+                </div>
+                <div className="logo-item">
+                  <Image src="/Kerala_StartUp_Mission_Logo.svg" alt="Kerala Startup Mission" width={100} height={40} style={{ objectFit: 'contain' }} />
+                  <span className="logo-partner-label">Ecosystem Partner</span>
+                </div>
+                <div className="logo-item">
+                  <Image src="/Amazon_Web_Services_Logo (1).svg" alt="Amazon Web Services" width={100} height={40} style={{ objectFit: 'contain' }} />
+                  <span className="logo-partner-label">Cloud Partner</span>
+                </div>
+                <div className="logo-item">
+                  <Image src="/msg91.svg" alt="MSG91" width={100} height={40} style={{ objectFit: 'contain' }} />
+                  <span className="logo-partner-label">Communication Partner</span>
+                </div>
               </div>
             </div>
           </div>

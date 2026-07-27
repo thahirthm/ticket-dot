@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Open_Sans } from "next/font/google";
 import "./globals.css";
 
 const neurialGrotesk = localFont({
@@ -29,10 +28,6 @@ const neurialGrotesk = localFont({
   variable: "--font-heading",
 });
 
-const openSans = Open_Sans({
-  variable: "--font-body",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "TicketDot",
@@ -111,8 +106,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${neurialGrotesk.variable} ${openSans.variable}`}>
+    <html lang="en" className={`${neurialGrotesk.variable}`}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet" />
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{

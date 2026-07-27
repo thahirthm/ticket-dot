@@ -7,16 +7,15 @@ export default function AccessibilityStatement() {
     <main className="legal-page-main">
       <Header />
       
-      <div className="legal-content-wrapper">
-        <div className="container">
-          <div className="legal-card">
-            <h1 className="legal-title">Accessibility Statement</h1>
-            <p className="legal-meta">
-              For: TicketDot Technologies Private Limited<br/>
-              Effective Date: ______<br/>
-              Last Updated: ______
-            </p>
+      <div className="legal-header">
+        <h1 className="legal-title">Accessibility Statement</h1>
+        <p className="legal-subtitle">
+          Welcome to TicketDot Technologies. We are committed to providing an accessible experience on the TicketDot website and mobile applications.
+        </p>
+      </div>
 
+      <div className="legal-content-wrapper">
+        <div className="container legal-container">
             <div className="legal-sections">
               <section>
                 <p>TicketDot Technologies Private Limited is committed to providing an accessible experience on the TicketDot website and mobile applications.</p>
@@ -56,7 +55,6 @@ export default function AccessibilityStatement() {
             <div className="legal-warning">
               IMPORTANT: This document is a professionally structured draft and should be reviewed by legal counsel before publication.
             </div>
-          </div>
         </div>
       </div>
       
