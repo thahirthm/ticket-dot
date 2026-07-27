@@ -7,15 +7,15 @@ export default function PrivacyPolicy() {
     <main className="legal-page-main">
       <Header />
       
-      <div className="legal-content-wrapper">
-        <div className="container">
-          <div className="legal-card">
-            <h1 className="legal-title">Privacy Policy</h1>
-            <p className="legal-meta">
-              For: TicketDot Technologies Private Limited<br/>
-              Version: 1.0 (Draft)
-            </p>
+      <div className="legal-header">
+        <h1 className="legal-title">Privacy Policy</h1>
+        <p className="legal-subtitle">
+          Welcome to TicketDot Technologies. We are committed to protecting your privacy and the security of your personal information. This privacy policy explains how we collect, use, store, and share your personal information.
+        </p>
+      </div>
 
+      <div className="legal-content-wrapper">
+        <div className="container legal-container">
             <div className="legal-sections">
               <section>
                 <h2 className="legal-section-title">1. Introduction</h2>
@@ -81,7 +81,6 @@ export default function PrivacyPolicy() {
             <div className="legal-warning">
               IMPORTANT: This document is a professionally structured draft and should be reviewed by legal counsel before publication.
             </div>
-          </div>
         </div>
       </div>
       

@@ -39,8 +39,9 @@ export default function Support() {
                 </svg>
               </div>
               <div className="support-info-text">
-                Njarangal House, Kurikkathoor, P.O<br />
-                Kunnamangalam M.I.E, Kozhikode - 673571
+                Ground Floor, Kerala Startup Mission,<br />
+                Cyberpark Calicut,<br />
+                673016
               </div>
             </div>
 
@@ -51,7 +52,7 @@ export default function Support() {
                 </svg>
               </div>
               <div className="support-info-text">
-                +91 96456 21971
+                080 757 09009
               </div>
             </div>
           </div>

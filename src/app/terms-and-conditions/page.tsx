@@ -7,15 +7,15 @@ export default function TermsAndConditions() {
     <main className="legal-page-main">
       <Header />
       
-      <div className="legal-content-wrapper">
-        <div className="container">
-          <div className="legal-card">
-            <h1 className="legal-title">Terms & Conditions</h1>
-            <p className="legal-meta">
-              For: TicketDot Technologies Private Limited<br/>
-              Version: 1.0 (Draft)
-            </p>
+      <div className="legal-header">
+        <h1 className="legal-title">Terms & Conditions</h1>
+        <p className="legal-subtitle">
+          Welcome to TicketDot Technologies. These Terms and Conditions govern your use of our website, mobile application, and related services. By accessing or using TicketDot, you agree to be bound by these Terms.
+        </p>
+      </div>
 
+      <div className="legal-content-wrapper">
+        <div className="container legal-container">
             <div className="legal-sections">
               <section>
                 <h2 className="legal-section-title">1. Acceptance</h2>
@@ -81,7 +81,6 @@ export default function TermsAndConditions() {
             <div className="legal-warning">
               IMPORTANT: This document is a professionally structured draft and should be reviewed by legal counsel before publication.
             </div>
-          </div>
         </div>
       </div>
       
