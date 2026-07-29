@@ -417,16 +417,16 @@ export default function Home() {
                 From daily commutes to weekend trips, TicketDot makes booking simple, paperless, and hassle-free. Join the future of bus travel.
               </p>
 
-              <button className="cta-download-btn">
+              {/* <button className="cta-download-btn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                   <polyline points="7 10 12 15 17 10"></polyline>
                   <line x1="12" y1="15" x2="12" y2="3"></line>
                 </svg>
                 Download the TicketDot App
-              </button>
+              </button> */}
 
-              <div className="cta-available-text">Available on</div>
+              <div className="cta-available-text">Coming soon on</div>
 
               <div className="cta-badges">
                 <Link href="#" style={{ display: 'inline-block' }}>
