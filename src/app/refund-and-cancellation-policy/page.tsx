@@ -21,7 +21,7 @@ export default function RefundAndCancellationPolicy() {
                 <h2 className="legal-section-title">Introduction</h2>
                 <p>Refund eligibility depends on the cancellation policy of the respective bus operator and the circumstances of the booking.</p>
                 <p className="mt-2">You may be eligible for a refund if:</p>
-                <ul className="list-disc pl-5 mt-2 space-y-1">
+                <ul className="list-none mt-2 space-y-4">
                   <li>You cancel your ticket within the cancellation period specified by the bus operator.</li>
                   <li>The bus operator cancels the trip.</li>
                   <li>The bus service is not operated.</li>
@@ -35,7 +35,7 @@ export default function RefundAndCancellationPolicy() {
                 <h2 className="legal-section-title">2. Ticket Cancellation</h2>
                 <p>Passengers can cancel eligible bookings through the TicketDot application or website before the scheduled departure time.</p>
                 <p className="mt-2">The refund amount will be determined based on:</p>
-                <ul className="list-disc pl-5 mt-2 space-y-1">
+                <ul className="list-none mt-2 space-y-4">
                   <li>The cancellation policy of the bus operator.</li>
                   <li>The time remaining before departure.</li>
                   <li>Applicable cancellation charges.</li>
@@ -47,7 +47,7 @@ export default function RefundAndCancellationPolicy() {
               <section>
                 <h2 className="legal-section-title">3. Refund Processing Time</h2>
                 <p>Once a refund is approved:</p>
-                <ul className="list-disc pl-5 mt-2 space-y-1">
+                <ul className="list-none mt-2 space-y-4">
                   <li>UPI payments are generally refunded within 3–7 business days.</li>
                   <li>Debit and credit card payments are generally refunded within 5–10 business days.</li>
                   <li>Net banking refunds are generally processed within 5–10 business days.</li>
@@ -59,7 +59,7 @@ export default function RefundAndCancellationPolicy() {
               <section>
                 <h2 className="legal-section-title">4. Bus Cancellation by the Operator</h2>
                 <p>If a bus operator cancels a scheduled trip:</p>
-                <ul className="list-disc pl-5 mt-2 space-y-1">
+                <ul className="list-none mt-2 space-y-4">
                   <li>Eligible passengers will receive a refund according to the operator's cancellation policy.</li>
                   <li>TicketDot will initiate the refund after confirmation from the operator.</li>
                   <li>Alternative travel options may be offered where available.</li>
@@ -69,7 +69,7 @@ export default function RefundAndCancellationPolicy() {
               <section>
                 <h2 className="legal-section-title">5. Failed or Unsuccessful Transactions</h2>
                 <p>If payment is successfully debited but your booking is not confirmed:</p>
-                <ul className="list-disc pl-5 mt-2 space-y-1">
+                <ul className="list-none mt-2 space-y-4">
                   <li>The amount is generally refunded automatically.</li>
                   <li>If the refund is not received within the expected timeframe, please contact TicketDot Customer Support with your booking or transaction details.</li>
                 </ul>
@@ -78,7 +78,7 @@ export default function RefundAndCancellationPolicy() {
               <section>
                 <h2 className="legal-section-title">6. Duplicate Payments</h2>
                 <p>If you are charged more than once for the same booking:</p>
-                <ul className="list-disc pl-5 mt-2 space-y-1">
+                <ul className="list-none mt-2 space-y-4">
                   <li>The duplicate transaction will be reviewed.</li>
                   <li>Once verified, the additional amount will be refunded to the original payment method.</li>
                 </ul>
@@ -87,7 +87,7 @@ export default function RefundAndCancellationPolicy() {
               <section>
                 <h2 className="legal-section-title">7. Non-Refundable Charges</h2>
                 <p>Unless otherwise required by law or stated by the bus operator, the following may not be refundable:</p>
-                <ul className="list-disc pl-5 mt-2 space-y-1">
+                <ul className="list-none mt-2 space-y-4">
                   <li>Convenience fees</li>
                   <li>Platform or service charges</li>
                   <li>Payment gateway charges</li>
@@ -98,7 +98,7 @@ export default function RefundAndCancellationPolicy() {
               <section>
                 <h2 className="legal-section-title">8. No-Show Policy</h2>
                 <p>Passengers who:</p>
-                <ul className="list-disc pl-5 mt-2 space-y-1">
+                <ul className="list-none mt-2 space-y-4">
                   <li>Fail to arrive at the boarding point before departure,</li>
                   <li>Miss the bus,</li>
                   <li>Provide incorrect travel details, or</li>
@@ -110,10 +110,10 @@ export default function RefundAndCancellationPolicy() {
               <section>
                 <h2 className="legal-section-title">9. How to Request a Refund</h2>
                 <p>You can request a refund by:</p>
-                <ul className="list-disc pl-5 mt-2 space-y-1">
+                <ul className="list-none mt-2 space-y-4">
                   <li>Cancelling your booking through the TicketDot app or website (where eligible), or</li>
                   <li>Contacting TicketDot Customer Support with:
-                    <ul className="list-circle pl-5 mt-1 space-y-1">
+                    <ul className="list-circle pl-5 mt-1 space-y-4">
                       <li>Booking ID</li>
                       <li>Registered mobile number</li>
                       <li>Transaction details</li>
