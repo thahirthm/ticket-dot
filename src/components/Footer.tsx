@@ -149,7 +149,7 @@ export default function Footer() {
       <div className="footer-bottom-bar">
         <div className="container">
           <div className="footer-bottom-content">
-            <p className="copyright">© TicketDot Ltd. 2026. All Rights Reserved.</p>
+            <p className="copyright">© TicketDot Technologies Pvt Ltd. 2026. All Rights Reserved.</p>
             <div className="social-links">
               <a href="#" aria-label="Instagram">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
