@@ -10,7 +10,7 @@ export default function RefundAndCancellationPolicy() {
       <div className="legal-header">
         <h1 className="legal-title">Refund & Cancellation Policy</h1>
         <p className="legal-subtitle">
-          Welcome to TicketDot Technologies. This policy outlines our guidelines and procedures regarding refunds and cancellations for tickets purchased through our platform.
+          Welcome to TicketDot Technologies.. We are committed to protecting your privacy and the security of your personal information.This privacy policy explains how we collect, use, store, and share your personal information.
         </p>
       </div>
 

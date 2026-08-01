@@ -10,7 +10,7 @@ export default function TermsAndConditions() {
       <div className="legal-header">
         <h1 className="legal-title">Terms & Conditions</h1>
         <p className="legal-subtitle">
-          Welcome to TicketDot Technologies. These Terms and Conditions govern your use of our website, mobile application, and related services. By accessing or using TicketDot, you agree to be bound by these Terms.
+          Welcome to TicketDot Technologies.. We are committed to protecting your privacy and the security of your personal information.This privacy policy explains how we collect, use, store, and share your personal information.
         </p>
       </div>
 
@@ -19,7 +19,7 @@ export default function TermsAndConditions() {
             <div className="legal-sections">
               <section>
                 <h2 className="legal-section-title">Introduction</h2>
-                <p>Welcome to TicketDot. These Terms &amp; Conditions ("Terms") govern your access to and use of the TicketDot website, mobile application, and related services.</p>
+                <p>Welcome to TicketDot. These Terms & Conditions ("Terms") govern your access to and use of the TicketDot website, mobile application, and related services.</p>
                 <p className="mt-2">By creating an account, booking a ticket, or using TicketDot, you agree to these Terms. If you do not agree with any part of these Terms, please do not use our services.</p>
               </section>
 
