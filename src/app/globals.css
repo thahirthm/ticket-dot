@@ -1484,6 +1484,7 @@ h6 {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
+  font-family: var(--font-heading);
 }
 
 .legal-header {
