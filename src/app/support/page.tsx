@@ -1,9 +1,43 @@
 "use client";
 
+import { useState } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export default function Support() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    // This is the ONLY way to "send" an email directly from the browser
+    // without using a backend or a 3rd-party service API key.
+    // It will open the user's default email app (like Outlook or Apple Mail).
+    const subject = encodeURIComponent(`New Contact Form Submission from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone}\n\n` +
+      `Message:\n${formData.message}`
+    );
+    
+    window.location.href = `mailto:hello@ticketdot.in?subject=${subject}&body=${body}`;
+    
+    setStatus("success");
+    setFormData({ name: "", email: "", phone: "", message: "" });
+  };
+
   return (
     <main>
       <Header />
@@ -59,29 +93,78 @@ export default function Support() {
         </div>
 
         <div className="support-right">
-          <form className="support-form" onSubmit={(e) => e.preventDefault()}>
+          <form className="support-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label>Full Name*</label>
-              <input type="text" className="form-input" placeholder="Enter Your Full Name" />
+              <input 
+                type="text" 
+                name="name"
+                className="form-input" 
+                placeholder="Enter Your Full Name" 
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
             </div>
 
             <div className="form-row">
               <div className="form-group">
                 <label>Email Address*</label>
-                <input type="email" className="form-input" placeholder="Enter Your Email Address" />
+                <input 
+                  type="email" 
+                  name="email"
+                  className="form-input" 
+                  placeholder="Enter Your Email Address" 
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
               </div>
               <div className="form-group">
                 <label>Phone Number*</label>
-                <input type="tel" className="form-input" placeholder="Enter Your Phone Number" />
+                <input 
+                  type="tel" 
+                  name="phone"
+                  className="form-input" 
+                  placeholder="Enter Your Phone Number" 
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                />
               </div>
             </div>
 
             <div className="form-group">
               <label>Message*</label>
-              <textarea className="form-input form-textarea" placeholder="Write Your Message Here"></textarea>
+              <textarea 
+                name="message"
+                className="form-input form-textarea" 
+                placeholder="Write Your Message Here"
+                value={formData.message}
+                onChange={handleChange}
+                required
+              ></textarea>
             </div>
 
-            <button type="submit" className="btn-submit">Send Message</button>
+            {status === "success" && (
+              <div className="text-green-600 mb-4 font-medium p-3 bg-green-50 rounded-md border border-green-200">
+                Your message has been sent successfully! We will get back to you soon.
+              </div>
+            )}
+            
+            {status === "error" && (
+              <div className="text-red-600 mb-4 font-medium p-3 bg-red-50 rounded-md border border-red-200">
+                {errorMessage}
+              </div>
+            )}
+
+            <button 
+              type="submit" 
+              className="btn-submit disabled:opacity-70 disabled:cursor-not-allowed"
+              disabled={status === "loading"}
+            >
+              {status === "loading" ? "Sending..." : "Send Message"}
+            </button>
           </form>
         </div>
       </section>

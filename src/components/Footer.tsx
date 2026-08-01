@@ -26,6 +26,9 @@ export default function Footer() {
                 />
               </Link>
               <p className="footer-slogan">Making Every Journey Effortless.</p>
+              <p className="footer-cin" style={{ fontSize: "0.85rem", color: "#666", marginTop: "0.5rem" }}>
+                CIN : U62099KL2025PTC097889
+              </p>
             </div>
 
             {/* What at Ticketdot */}
