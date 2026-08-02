@@ -31,7 +31,7 @@ export default function TermsAndConditions() {
               <section>
                 <h2 className="legal-section-title">2. User Eligibility</h2>
                 <p>To use TicketDot, you must:</p>
-                <ul className="list-none mt-2 space-y-4">
+                <ul className="list-disc pl-5 legal-bullet-list mt-2 space-y-4">
                   <li>Be at least 18 years of age or use the service under the supervision of a parent or legal guardian.</li>
                   <li>Provide accurate and complete registration information.</li>
                   <li>Maintain the confidentiality of your account credentials.</li>
@@ -42,7 +42,7 @@ export default function TermsAndConditions() {
               <section>
                 <h2 className="legal-section-title">3. Account Registration</h2>
                 <p>When creating an account, you agree to:</p>
-                <ul className="list-none mt-2 space-y-4">
+                <ul className="list-disc pl-5 legal-bullet-list mt-2 space-y-4">
                   <li>Provide accurate and up-to-date information.</li>
                   <li>Keep your login credentials secure.</li>
                   <li>Notify TicketDot immediately if you suspect unauthorized access to your account.</li>
@@ -54,7 +54,7 @@ export default function TermsAndConditions() {
               <section>
                 <h2 className="legal-section-title">4. Ticket Booking</h2>
                 <p>When booking a ticket, you agree that:</p>
-                <ul className="list-none mt-2 space-y-4">
+                <ul className="list-disc pl-5 legal-bullet-list mt-2 space-y-4">
                   <li>All booking information provided is accurate.</li>
                   <li>Seat availability is subject to confirmation.</li>
                   <li>Ticket prices may change without prior notice until the booking is successfully completed.</li>
@@ -66,7 +66,7 @@ export default function TermsAndConditions() {
               <section>
                 <h2 className="legal-section-title">5. Payments</h2>
                 <p>TicketDot accepts payments through secure third-party payment providers. By making a payment, you agree that:</p>
-                <ul className="list-none mt-2 space-y-4">
+                <ul className="list-disc pl-5 legal-bullet-list mt-2 space-y-4">
                   <li>You are authorized to use the selected payment method.</li>
                   <li>Payment information is accurate.</li>
                   <li>Applicable service charges and taxes may be included during checkout.</li>
@@ -77,7 +77,7 @@ export default function TermsAndConditions() {
               <section>
                 <h2 className="legal-section-title">6. Ticket Cancellation and Refunds</h2>
                 <p>Cancellation and refund eligibility depend on:</p>
-                <ul className="list-none mt-2 space-y-4">
+                <ul className="list-disc pl-5 legal-bullet-list mt-2 space-y-4">
                   <li>The cancellation policy of the respective bus operator.</li>
                   <li>The time remaining before departure.</li>
                   <li>Applicable service fees.</li>
@@ -89,7 +89,7 @@ export default function TermsAndConditions() {
               <section>
                 <h2 className="legal-section-title">7. Boarding Requirements</h2>
                 <p>Passengers are responsible for:</p>
-                <ul className="list-none mt-2 space-y-4">
+                <ul className="list-disc pl-5 legal-bullet-list mt-2 space-y-4">
                   <li>Arriving at the boarding point before the scheduled departure time.</li>
                   <li>Carrying a valid ticket or digital booking confirmation.</li>
                   <li>Presenting a valid government-issued identification if requested by the bus operator.</li>
@@ -100,7 +100,7 @@ export default function TermsAndConditions() {
               <section>
                 <h2 className="legal-section-title">8. Bus Operator Responsibilities</h2>
                 <p>Bus operators are solely responsible for:</p>
-                <ul className="list-none mt-2 space-y-4">
+                <ul className="list-disc pl-5 legal-bullet-list mt-2 space-y-4">
                   <li>Bus schedules</li>
                   <li>Route changes</li>
                   <li>Boarding procedures</li>
@@ -115,7 +115,7 @@ export default function TermsAndConditions() {
               <section>
                 <h2 className="legal-section-title">9. User Responsibilities</h2>
                 <p>Users agree not to:</p>
-                <ul className="list-none mt-2 space-y-4">
+                <ul className="list-disc pl-5 legal-bullet-list mt-2 space-y-4">
                   <li>Use TicketDot for unlawful purposes.</li>
                   <li>Attempt unauthorized access to our systems.</li>
                   <li>Provide false or fraudulent information.</li>
@@ -128,7 +128,7 @@ export default function TermsAndConditions() {
               <section>
                 <h2 className="legal-section-title">10. Intellectual Property</h2>
                 <p>All content available on TicketDot, including:</p>
-                <ul className="list-none mt-2 space-y-4">
+                <ul className="list-disc pl-5 legal-bullet-list mt-2 space-y-4">
                   <li>Logo</li>
                   <li>Branding</li>
                   <li>Design</li>
@@ -145,7 +145,7 @@ export default function TermsAndConditions() {
               <section>
                 <h2 className="legal-section-title">11. Limitation of Liability</h2>
                 <p>To the maximum extent permitted by law, TicketDot shall not be liable for:</p>
-                <ul className="list-none mt-2 space-y-4">
+                <ul className="list-disc pl-5 legal-bullet-list mt-2 space-y-4">
                   <li>Bus delays or cancellations</li>
                   <li>Missed connections</li>
                   <li>Traffic conditions</li>
@@ -187,9 +187,7 @@ export default function TermsAndConditions() {
               </section>
             </div>
             
-            <div className="legal-warning">
-              IMPORTANT: This document is a professionally structured draft and should be reviewed by legal counsel before publication.
-            </div>
+
         </div>
       </div>
       
