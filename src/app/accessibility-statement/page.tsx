@@ -52,9 +52,7 @@ export default function AccessibilityStatement() {
               </section>
             </div>
             
-            <div className="legal-warning">
-              IMPORTANT: This document is a professionally structured draft and should be reviewed by legal counsel before publication.
-            </div>
+
         </div>
       </div>
       

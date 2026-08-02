@@ -34,6 +34,15 @@ const featuresList = [
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [activeFeature, setActiveFeature] = useState(0);
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+
+  const handleStoreClick = (e: React.MouseEvent, message: string) => {
+    e.preventDefault();
+    setToastMessage(message);
+    setTimeout(() => {
+      setToastMessage(null);
+    }, 3000);
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -77,8 +86,8 @@ export default function Home() {
             </p>
 
             <div className="hero-actions">
-              <button className="btn btn-white">Features</button>
-              <button className="btn btn-primary">Download</button>
+              <a href="#features" className="btn btn-white">Features</a>
+              <a href="#download" className="btn btn-primary">Download</a>
             </div>
 
             <div className="hero-indicators">
@@ -111,7 +120,7 @@ export default function Home() {
               <p className="feature-desc">
                 TicketDot is a modern digital ticketing platform that makes bus travel fast, seamless, and eco-friendly. Book, manage, and validate your tickets instantly anytime, anywhere.
               </p>
-              <button className="btn btn-primary">Get the app</button>
+              <a href="#download" className="btn btn-primary">Get the app</a>
             </div>
           </div>
         </div>
@@ -429,7 +438,7 @@ export default function Home() {
               <div className="cta-available-text">Coming soon on</div>
 
               <div className="cta-badges">
-                <Link href="#" style={{ display: 'inline-block' }}>
+                <a href="#" onClick={(e) => handleStoreClick(e, 'Coming soon on App Store')} style={{ display: 'inline-block', cursor: 'pointer' }}>
                   <Image 
                     src="/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" 
                     alt="Download on the App Store" 
@@ -437,9 +446,9 @@ export default function Home() {
                     height={50} 
                     style={{ objectFit: 'contain' }}
                   />
-                </Link>
+                </a>
 
-                <Link href="#" style={{ display: 'inline-block' }}>
+                <a href="#" onClick={(e) => handleStoreClick(e, 'Coming soon on Google Play')} style={{ display: 'inline-block', cursor: 'pointer' }}>
                   <Image 
                     src="/GetItOnGooglePlay_Badge_Web_color_English.svg" 
                     alt="Get it on Google Play" 
@@ -447,7 +456,7 @@ export default function Home() {
                     height={50} 
                     style={{ objectFit: 'contain' }}
                   />
-                </Link>
+                </a>
               </div>
 
               <div className="trusted-badge">
@@ -462,6 +471,25 @@ export default function Home() {
       </section>
 
       <Footer />
+
+      {toastMessage && (
+        <div style={{
+          position: 'fixed',
+          bottom: '2rem',
+          right: '2rem',
+          backgroundColor: '#2A2A2A',
+          color: 'white',
+          padding: '12px 24px',
+          borderRadius: '8px',
+          zIndex: 1000,
+          boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+          fontSize: '0.95rem',
+          fontWeight: 500,
+          transition: 'all 0.3s ease'
+        }}>
+          {toastMessage}
+        </div>
+      )}
     </main>
   );
 }

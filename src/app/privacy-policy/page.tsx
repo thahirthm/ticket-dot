@@ -75,7 +75,7 @@ export default function PrivacyPolicy() {
               <section>
                 <h2 className="legal-section-title">2. How We Use Your Information</h2>
                 <p>We use your information to:</p>
-                <ul className="list-none mt-4 space-y-4 text-[15px]">
+                <ul className="list-disc pl-5 legal-bullet-list mt-4 space-y-4 text-[15px]">
                   <li>Create and manage your TicketDot account</li>
                   <li>Book and manage bus tickets</li>
                   <li>Process payments and refunds</li>
@@ -125,7 +125,7 @@ export default function PrivacyPolicy() {
               <section>
                 <h2 className="legal-section-title">4. Data Security</h2>
                 <p>We implement appropriate technical and organizational security measures to protect your information, including:</p>
-                <ul className="list-none mt-4 space-y-4 text-[15px]">
+                <ul className="list-disc pl-5 legal-bullet-list mt-4 space-y-4 text-[15px]">
                   <li>Encrypted data transmission (HTTPS/SSL)</li>
                   <li>Secure cloud infrastructure</li>
                   <li>Access controls and authentication</li>
@@ -138,7 +138,7 @@ export default function PrivacyPolicy() {
               <section>
                 <h2 className="legal-section-title">5. Data Retention</h2>
                 <p>We retain your information only for as long as necessary to:</p>
-                <ul className="list-none mt-4 space-y-4 text-[15px]">
+                <ul className="list-disc pl-5 legal-bullet-list mt-4 space-y-4 text-[15px]">
                   <li>Provide our services</li>
                   <li>Maintain booking records</li>
                   <li>Meet legal and regulatory requirements</li>
@@ -151,7 +151,7 @@ export default function PrivacyPolicy() {
               <section>
                 <h2 className="legal-section-title">6. Your Rights</h2>
                 <p>You have the right to:</p>
-                <ul className="list-none mt-4 space-y-4 text-[15px]">
+                <ul className="list-disc pl-5 legal-bullet-list mt-4 space-y-4 text-[15px]">
                   <li>Access your personal information</li>
                   <li>Update or correct your information</li>
                   <li>Request deletion of your account (subject to legal obligations)</li>
@@ -164,7 +164,7 @@ export default function PrivacyPolicy() {
               <section>
                 <h2 className="legal-section-title">7. Cookies and Analytics</h2>
                 <p>Our website and application may use cookies and similar technologies to:</p>
-                <ul className="list-none mt-4 space-y-4 text-[15px]">
+                <ul className="list-disc pl-5 legal-bullet-list mt-4 space-y-4 text-[15px]">
                   <li>Remember your preferences</li>
                   <li>Improve website performance</li>
                   <li>Analyze usage patterns</li>
@@ -176,7 +176,7 @@ export default function PrivacyPolicy() {
               <section>
                 <h2 className="legal-section-title">8. Third-Party Services</h2>
                 <p>TicketDot may contain links to third-party websites or integrate services provided by third parties, including:</p>
-                <ul className="list-none mt-4 space-y-4 text-[15px]">
+                <ul className="list-disc pl-5 legal-bullet-list mt-4 space-y-4 text-[15px]">
                   <li>Payment gateways</li>
                   <li>Bus operator systems</li>
                   <li>Maps and location services</li>
@@ -208,9 +208,7 @@ export default function PrivacyPolicy() {
               </section>
             </div>
             
-            <div className="legal-warning">
-              IMPORTANT: This document is a professionally structured draft and should be reviewed by legal counsel before publication.
-            </div>
+
         </div>
       </div>
       
